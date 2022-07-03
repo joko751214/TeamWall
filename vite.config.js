@@ -14,12 +14,5 @@ export default defineConfig({
   base: '/TeamWall/',
   server: {
     port: 3005,
-    proxy: {
-      '/api': {
-        target: 'https://glacial-forest-47470.herokuapp.com/',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(new RegExp('^' + '/api'), ''),
-      },
-    },
   },
 });
